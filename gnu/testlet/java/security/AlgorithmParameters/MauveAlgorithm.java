@@ -1,4 +1,4 @@
-// $Id: MauveAlgorithm.java,v 1.1 2003/03/20 00:24:01 raif Exp $
+// $Id: MauveAlgorithm.java,v 1.2 2004/05/02 12:48:24 aph Exp $
 //
 // Copyright (C) 2003, Free Software Foundation, Inc.
 //
@@ -19,7 +19,7 @@
 // the Free Software Foundation, 59 Temple Place - Suite 330,
 // Boston, MA 02111-1307, USA.
 //
-// Tags: none
+// Tags: not-a-test
 
 package gnu.testlet.java.security.AlgorithmParameters;
 import java.io.IOException;
