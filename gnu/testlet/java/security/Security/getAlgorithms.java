@@ -1,4 +1,4 @@
-// $Id: getAlgorithms.java,v 1.2 2003/04/01 07:55:10 raif Exp $
+// $Id: getAlgorithms.java,v 1.3 2003/04/07 15:42:11 crawley Exp $
 //
 // Copyright (C) 2003, Free Software Foundation, Inc.
 //
@@ -32,12 +32,12 @@ import java.util.Iterator;
 /**
  * Test of <code>getAlgorithms(String)</code> method in {@link Security}.
  *
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  * @see Security#getAlgorithms(String)
  */
 public class getAlgorithms extends Provider implements Testlet
 {
-  getAlgorithms()
+  public getAlgorithms()
   {
     super("getAlgorithms", 1.0, "");
 

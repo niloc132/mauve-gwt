@@ -1,4 +1,4 @@
-// $Id: getInstance14.java,v 1.1 2003/03/20 00:28:04 raif Exp $
+// $Id: getInstance14.java,v 1.2 2003/04/07 15:42:11 crawley Exp $
 //
 // Copyright (C) 2003, Free Software Foundation, Inc.
 //
@@ -32,7 +32,7 @@ import java.security.Security;
 
 public class getInstance14 extends Provider implements Testlet
 {
-  getInstance14()
+  public getInstance14()
   {
     super("self", 1.0, "");
 
