@@ -1,4 +1,4 @@
-// $Id: getProviders.java,v 1.1 2003/03/09 07:58:13 raif Exp $
+// $Id: getProviders.java,v 1.2 2006/01/03 09:24:39 raif Exp $
 //
 // Copyright (C) 2003 Free Software Foundation, Inc.
 //
@@ -33,7 +33,7 @@ import java.security.InvalidParameterException;
  * Test of <code>getProviders(String)</code> and <code>getProviders(Map)
  * methods in {@link java.security.Security}.
  *
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  * @see java.security.Security#getProviders(String)
  * @see java.security.Security#getProviders(java.util.Map)
  */
@@ -71,6 +71,18 @@ public class getProviders implements Testlet
   private void test1Provider(TestHarness harness)
   {
     Security.addProvider(tom);
+
+    String signature = "Security.getProvider(\"tom\")";
+    try
+      {
+        Provider sameProvider = Security.getProvider("  Tom  ");
+        harness.check(sameProvider != null, signature);
+      }
+    catch (Throwable x)
+      {
+        harness.fail(signature);
+        harness.debug(x);
+      }
 
     String filter = "NoService.NoAlgorithm";
     // try dummy filter with one known provider
