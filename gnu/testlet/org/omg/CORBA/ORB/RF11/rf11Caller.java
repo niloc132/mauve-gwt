@@ -1,3 +1,6 @@
+// Tags: not-a-test
+// Uses: ../../Asserter
+
 // Copyright (c) 2000, 2001 NEC Corporation.
 
 // Adapted for Mauve by Audrius Meskauskas <audriusa@bluewin.ch>
@@ -66,7 +69,7 @@ administrated by Duncan Grisby.
 // OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 // ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 // CVS
-// $Id: rf11Caller.java,v 1.1 2005/06/04 12:00:34 audriusa Exp $
+// $Id: rf11Caller.java,v 1.2 2008/06/25 08:01:02 twisti Exp $
 //
 
 package gnu.testlet.org.omg.CORBA.ORB.RF11;
