@@ -24,10 +24,6 @@ package gnu.testlet;
 import java.awt.AWTException;
 import java.awt.Robot;
 
-import java.io.File;
-import java.io.Reader;
-import java.io.InputStream;
-
 /**
  * This base class defines the API that test cases can report against.  This
  * code has been lifted from the Mauve project (and reformatted and 
