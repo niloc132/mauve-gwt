@@ -42,11 +42,11 @@ public class unicode extends UnicodeBase implements Testlet
     super();
   }
 
-  public unicode(TestHarness aHarness, String filename) 
-    throws IOException, ResourceNotFoundException
-  {
-    super(aHarness, filename);
-  }
+//  public unicode(TestHarness aHarness, String filename) 
+//    throws IOException, ResourceNotFoundException
+//  {
+//    super(aHarness, filename);
+//  }
 
 
   public void test(TestHarness harness)
@@ -55,12 +55,15 @@ public class unicode extends UnicodeBase implements Testlet
     long start = System.currentTimeMillis();
     try
       {
-	unicode t = new unicode(harness, fileName);
-	long midtime = System.currentTimeMillis();
-	t.performTests();
-	harness.debug("Benchmark : load:" + (midtime-start) + 
-		      "ms   tests:" +  
-		      (System.currentTimeMillis() - midtime) + "ms");
+    	//commented out for now, along with part of UnicodeBase
+//	unicode t = new unicode(harness, fileName);
+//	long midtime = System.currentTimeMillis();
+//	
+//	t.performTests();
+//	
+//	harness.debug("Benchmark : load:" + (midtime-start) + 
+//		      "ms   tests:" +  
+//		      (System.currentTimeMillis() - midtime) + "ms");
       }
     catch (Exception e)
       {

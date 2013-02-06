@@ -50,7 +50,7 @@ public class constructor implements Testlet
         harness.check(object2 != null);
         harness.check(object2.toString(), "java.util.ConcurrentModificationException: nothing happens");
 
-        ConcurrentModificationException object3 = new ConcurrentModificationException(null);
+        ConcurrentModificationException object3 = new ConcurrentModificationException((String)null);
         harness.check(object3 != null);
         harness.check(object3.toString(), "java.util.ConcurrentModificationException");
 

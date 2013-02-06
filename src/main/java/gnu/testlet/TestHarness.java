@@ -34,7 +34,7 @@ import java.io.InputStream;
  * commented).
  */
 public abstract class TestHarness
-  implements config
+//  implements config
 {
   /**
    * Records the result of a boolean check.
@@ -222,14 +222,14 @@ public abstract class TestHarness
   // just like file names.  They are relative to the top level Mauve
   // directory, but '#' characters are used in place of directory
   // separators.
-  public abstract Reader getResourceReader (String name) 
-    throws ResourceNotFoundException;
-
-  public abstract InputStream getResourceStream (String name) 
-    throws ResourceNotFoundException;
-
-  public abstract File getResourceFile (String name) 
-    throws ResourceNotFoundException;
+//  public abstract Reader getResourceReader (String name) 
+//    throws ResourceNotFoundException;
+//
+//  public abstract InputStream getResourceStream (String name) 
+//    throws ResourceNotFoundException;
+//
+//  public abstract File getResourceFile (String name) 
+//    throws ResourceNotFoundException;
 
   /**
    * Records a check point.  This can be used to mark a known place in a 
@@ -276,64 +276,64 @@ public abstract class TestHarness
    */
   public abstract void debug (Object[] o, String desc);
 
-  // Default config interface methods.
-  public String getSourceDirectory ()
-  {
-    return srcdir;
-  }
-
-  public String getBuildDirectory ()
-  {
-    return builddir;
-  }
-  
-  /**
-   * Provide a directory name for writing temporary files.
-   *
-   * @return The temporary directory name.
-   */
-
-  public String getTempDirectory ()
-  {
-    return tmpdir;
-  }
-  
-  public String getPathSeparator ()
-  {
-    return pathSeparator;
-  }
-  
-  public String getSeparator ()
-  {
-    return separator;
-  }
-  
-  public String getMailHost ()
-  {
-    return mailHost;
-  }
-  public String getAutoCompile()
-  {
-    return autoCompile;
-  }
-
-  public String getCpInstallDir()
-  {
-    return cpInstallDir;
-  }
-
-  public String getEcjJar()
-  {
-    return ecjJar;
-  }
-  
-  public String getEmmaString()
-  {
-    return emmaString;
-  }
-
-  public String getTestJava()
-  {
-    return testJava;
-  } 
+//  // Default config interface methods.
+//  public String getSourceDirectory ()
+//  {
+//    return srcdir;
+//  }
+//
+//  public String getBuildDirectory ()
+//  {
+//    return builddir;
+//  }
+//  
+//  /**
+//   * Provide a directory name for writing temporary files.
+//   *
+//   * @return The temporary directory name.
+//   */
+//
+//  public String getTempDirectory ()
+//  {
+//    return tmpdir;
+//  }
+//  
+//  public String getPathSeparator ()
+//  {
+//    return pathSeparator;
+//  }
+//  
+//  public String getSeparator ()
+//  {
+//    return separator;
+//  }
+//  
+//  public String getMailHost ()
+//  {
+//    return mailHost;
+//  }
+//  public String getAutoCompile()
+//  {
+//    return autoCompile;
+//  }
+//
+//  public String getCpInstallDir()
+//  {
+//    return cpInstallDir;
+//  }
+//
+//  public String getEcjJar()
+//  {
+//    return ecjJar;
+//  }
+//  
+//  public String getEmmaString()
+//  {
+//    return emmaString;
+//  }
+//
+//  public String getTestJava()
+//  {
+//    return testJava;
+//  } 
 }

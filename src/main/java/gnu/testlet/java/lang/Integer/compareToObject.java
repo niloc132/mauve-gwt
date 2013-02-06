@@ -36,7 +36,7 @@ public class compareToObject implements Testlet
   void compare(Integer i1, Object o, int expected)
   {
     // the result need not be -1, 0, 1; just <0, 0, >0
-    int result = i1.compareTo(o);
+    int result = ((Comparable)i1).compareTo(o);
     switch (expected)
       {
       case LESS:

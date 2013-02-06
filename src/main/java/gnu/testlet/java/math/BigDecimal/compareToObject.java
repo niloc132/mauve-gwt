@@ -194,7 +194,7 @@ public class compareToObject implements Testlet
 
   private int compare(BigDecimal a, Object b) throws ClassCastException
   {
-    return a.compareTo(b);
+    return ((Comparable)a).compareTo(b);
   }
 }
 

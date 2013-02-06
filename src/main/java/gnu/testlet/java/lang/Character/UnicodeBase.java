@@ -46,13 +46,13 @@ public abstract class UnicodeBase implements Testlet {
 	{
 	}
 
-	public UnicodeBase(TestHarness aHarness, String filename) 
-	throws ResourceNotFoundException, FileNotFoundException
-	{
-		harness = aHarness;
-		bir = harness.getResourceReader("gnu#testlet#java#lang#Character#" +
-				filename);
-	}
+//	public UnicodeBase(TestHarness aHarness, String filename) 
+//	throws ResourceNotFoundException, FileNotFoundException
+//	{
+//		harness = aHarness;
+//		bir = harness.getResourceReader("gnu#testlet#java#lang#Character#" +
+//				filename);
+//	}
 
 	private String getNext(Reader r) throws IOException
 	{
