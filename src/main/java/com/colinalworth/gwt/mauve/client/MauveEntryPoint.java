@@ -19,18 +19,37 @@ Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
 
 */
 
-// Tags: FIXME
-
 package com.colinalworth.gwt.mauve.client;
 
+import gnu.testlet.TestHarness;
+import gnu.testlet.Testlet;
+
+import java.util.Iterator;
+
 import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.core.client.Scheduler;
+import com.google.gwt.core.client.Scheduler.RepeatingCommand;
+import com.google.gwt.core.shared.GWT;
 
 public class MauveEntryPoint implements EntryPoint {
 
 	@Override
 	public void onModuleLoad() {
-		// TODO Auto-generated method stub
-
+		runAllTests();
+	}
+	
+	public void runAllTests() {
+		final TestHarness harness = GWT.create(TestHarness.class);
+		TestletCollection allTests = GWT.create(TestletCollection.class);
+		
+		final Iterator<Testlet> iter = allTests.getAll().iterator();
+		Scheduler.get().scheduleIncremental(new RepeatingCommand() {
+			@Override
+			public boolean execute() {
+				iter.next().test(harness);
+				return iter.hasNext();
+			}
+		});
 	}
 
 }

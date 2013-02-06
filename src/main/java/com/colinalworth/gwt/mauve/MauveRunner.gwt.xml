@@ -3,6 +3,14 @@
 <module rename-to="mauve">
 	<inherits name="com.google.gwt.user.User" />
 	<inherits name="gnu.testlet.Testlet" />
+	
+	<generate-with class="com.colinalworth.gwt.mauve.TestletCollectionGenerator">
+		<when-type-assignable class="com.colinalworth.gwt.mauve.client.TestletCollection"/>
+	</generate-with>
+	
+	<replace-with class="com.colinalworth.gwt.mauve.client.impl.GwtTestHarness">
+		<when-type-is class="gnu.testlet.TestHarness"/>
+	</replace-with>
 
 	<source path="client" />
 

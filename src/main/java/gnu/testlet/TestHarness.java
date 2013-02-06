@@ -21,9 +21,6 @@
 
 package gnu.testlet;
 
-import java.awt.AWTException;
-import java.awt.Robot;
-
 /**
  * This base class defines the API that test cases can report against.  This
  * code has been lifted from the Mauve project (and reformatted and 
@@ -184,22 +181,6 @@ public abstract class TestHarness
   {
     checkPoint(name);
     check(result, expected);
-  }
-
-  public Robot createRobot()
-  {
-    Robot r = null;
-
-    try
-      {
-        r = new Robot();
-      }
-    catch (AWTException e)
-      {
-        fail("TestHarness: couldn't create Robot: " + e.getMessage());
-      }
-
-    return r;
   }
 
   /**
